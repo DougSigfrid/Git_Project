@@ -1,0 +1,114 @@
+/*
+		CSS pour menu déroulant
+		
+*/
+
+/*------------Bloc Général--------------*/
+
+#menu a{
+	text-decoration:none;
+	display:block;
+	color:#fff;
+	text-align: center;
+}
+
+#menu li li a{
+		color:#444
+}
+
+#menu li li:hover{
+	background-color:#eee;
+}
+
+#menu li{
+	display:inline-block;/*mets les li cote à cote*/
+	width:146px;
+	padding:6px 15px;
+	background-color:#777;
+	background-image:linear-gradient(#aaa, #888 50%, #777 50%, #999);/*linear-gradient(direction,couleur de début,couleur intermédiaire,couleur de fin)*/
+	position:relative;
+}
+
+/*--- Styles pour arrondir la barre de navigation----*/
+
+#menu > li:first-child{/*sélectionne le premier enfant de li*/
+	border-radius:8px;
+	
+}
+
+#menu > li+li{
+	border-left:1px solid #aaa;
+	border-right:1px solid #777;
+	border-radius:8px;
+	margin-left:20px;
+}
+
+
+
+/*--- Styles propres au sous-menu----*/
+
+#menu > li:hover{
+	background-color:#999;
+	background-image:linear-gradient(#ccc, #aaa 50%, #999 50%, #bbb);
+}
+
+/*--- Sous-menu déroulés---*/
+
+#menu ul{/*Cible les deuxième ul*/
+	margin:0;
+	padding:0;
+	background-color:#ddd;
+	border-radius:0 0 8px 8px;
+	position:absolute;
+	top:2em;
+	left:0;
+	background-color:#ddd;
+	background-image:linear-gradient(#fff, #ddd);
+	max-height:0;
+	overflow:hidden;
+	transition:1s max-height 200ms; /*Durée prop avec délai*/
+}
+
+#menu ul li{
+	background:transparent none;/*annule la couleur ligne 26 et le dégradé ligne 27*/
+}
+
+#menu li:hover ul{
+	max-height:10em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
